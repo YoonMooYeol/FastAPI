@@ -22,3 +22,8 @@ class UserSchema(BaseModel):
 
 class JWTResponse(BaseModel):
     access_token: str
+
+class EmailSchema(BaseModel):
+    recipients: List[str]  # 수신자 목록
+    subject: str           # 이메일 제목
+    body: str
